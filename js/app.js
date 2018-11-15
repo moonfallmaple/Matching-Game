@@ -84,12 +84,15 @@ function congratulations(){
 // After each click, check if the star rating shoud be updated
 let finalStar=document.querySelector("#starRating");
 
-function starRemove(){   
-    if (moves==9){ 
+function starRemove(){
+    if (moves==8){ 
+        finalStar.textContent= "3";
+    }   
+    if (moves==13){ 
         stars[2].style.visibility = "collapse";
         finalStar.textContent= "2";
     }
-    else if (moves==13){    
+    else if (moves==15){    
         stars[1].style.visibility = "collapse";
         finalStar.textContent= "1";   
     }   
