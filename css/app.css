@@ -1,0 +1,239 @@
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    font-size: 33px;
+    background: #02ccba;
+}
+
+.deck .card.unmatch {
+    animation-name: pulse;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+    cursor: default;
+    background: #e25e11;
+    font-size: 33px;
+}
+.deck .card.disabled {
+	pointer-events: none;
+    opacity: 0.9;
+}
+
+.deck .card.enabled {
+	pointer-events: default;
+	
+}
+/*
+ * Styles for the Score Panel
+ */
+
+ .score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+.score-panel .timer {
+    font-family: 'Coda', cursive;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+
+.overlay{
+    position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgb(252, 249, 249);
+    visibility: hidden;	
+}
+.popup{
+    
+    text-align:center;
+    width:100%;
+    margin:200px auto;
+}
+
+.content-1, 
+.content-2{
+    font-size: 1.1rem;
+}
+
+.show{
+    visibility: visiable !important;
+}
+.collapse{
+    visibility: collapse;
+}
+#play-again{
+    background:#02ccba;
+    color:white;
+    border: none;
+    margin: 0 auto;
+    font-family: cursive;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+    display: inline-block;
+}
+
+/* Responsive */
+@media screen and (max-width: 400px){
+    .container {
+		font-size: 12px;
+    }
+    
+    .score-panel {
+        width: 290px;
+    }
+    .deck {
+        width: 86%;
+        min-height:340px;
+        padding:0.8rem;
+        margin-left:auto;
+        margin-right: auto;
+        margin: 0 0 1em;  
+         
+    }
+    .deck .card {       
+        height: 3.7rem;
+		width: 3.7rem;
+        margin: 0.2rem 0.2rem;
+    }
+ 
+    .deck .card.show,
+    .deck .card.match,
+    .deck .card.unmatch{
+        font-size:20px;
+    }
+}
+
+
+@media (min-width: 768px) {
+	.container {
+		font-size: 22px;
+	}
+
+	.deck {
+		width: 660px;
+		height: 680px;
+	}
+
+	.deck .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.popup {
+		width: 80%;
+	}
+}
