@@ -284,12 +284,12 @@ h1 {
     }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px){
+@media screen and (min-width: 767px) and (max-width: 1025px){
 	.container {
 		font-size: 20px;
 	}
     .score-panel{
-        width: 400px;      
+        width: 350px;      
     }
     .deck {
         width: 500px;
