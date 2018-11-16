@@ -222,41 +222,38 @@ h1 {
     }
 }
 
-@media screen and (min-width: 321px) and (max-width: 400px){
-    .container {
-		font-size: 12px;
-    }
-    
+@media screen and (min-width: 360px) and (max-width: 377px){
     .score-panel{
-        width: 230px; 
+        width: 260px;      
     }
     .deck {
         width: 86%;
-        min-height:320px;
+        min-height:310px;
         border-radius: 10px;
         padding:15px;
         margin-left:auto;
         margin-right: auto;
-        margin: 0 0 1em;  
-         
+        margin: 0 0 1em;
     }
     .deck .card {       
-        height: 3.6rem;
-		width: 3.6rem;
+        height: 3.5rem;
+        width: 3.5rem;
         margin: 0.3rem;
-    }
- 
+        }   
+
     .deck .card.show,
     .deck .card.match,
-    .deck .card.unmatch{
+    .deck .card.unmatch
+    {
         font-size:16px;
     }
     .popup{
     
         text-align:center;
         width: 68%;
-        margin: 130px auto
+        margin: 150px auto
     }
+
 }
 @media screen and (min-width: 401px) and (max-width: 450px){
     .score-panel{
