@@ -6,7 +6,7 @@
 
 * [Description](#description)
 * [Project Instructions](#project-instructions)
-* [Project Demo](#live-game)
+* [Project Demo](#Project-Demo)
 * [How The Game Works](#how-the-game-works)
 
 ## Description
@@ -21,7 +21,7 @@
 
 ## Project Demo
 
-Project Demo:https://moonfallmaple.github.io/matching-game/
+**Project Demo:** https://moonfallmaple.github.io/matching-game/
 
 ## How The Game Works
 
