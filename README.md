@@ -1,4 +1,4 @@
-# Matching-Game
+# Memory Game Project
 
 
 ## Table of Contents
