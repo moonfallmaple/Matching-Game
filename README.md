@@ -1,10 +1,10 @@
 # Matching-Game
 
 <div  align="left">
-<video width="320" height="240" controls>
+<!-- <video width="320" height="240" controls>
   <source src="https://youtu.be/r5YOzWxcbng" type="video/mp4">
-</video>
-<!-- <img src="./demo.jpg" width = "700" height = "500" alt="图片名称" align=center /> -->
+</video> -->
+<img src="./demo.jpg" width = "700" height = "400" alt="图片名称" align=center />
 </div>
 
 
@@ -15,7 +15,7 @@
 * [Project Instructions](#project-instructions)
 * [Project Demo](#Project-Demo)
 * [How The Game Works](#how-the-game-works)
-
+* [Game Functionality](#Game-Functionality)
 ## Description
 
 - Browser-based Memory game
